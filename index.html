@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f4">
+  <title>Untuk Tataa ♡</title>
+  <style>
+    :root { --pink:#e8799b; --deep:#9d4564; --paper:#fffafc; --ink:#59434b; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin:0; min-height:100vh; overflow-x:hidden; color:var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      background: radial-gradient(circle at top, #fffafd 0, #fff0f4 48%, #fbe1ea 100%);
+    }
+    .hearts { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:0; }
+    .heart {
+      position:absolute; bottom:-40px; color:#e8799b; opacity:.55;
+      animation: floatUp linear infinite; font-size:20px;
+    }
+    @keyframes floatUp {
+      from { transform:translateY(0) rotate(0deg); opacity:0; }
+      12% { opacity:.55; }
+      to { transform:translateY(-115vh) rotate(35deg); opacity:0; }
+    }
+    main { position:relative; z-index:1; width:min(92%, 680px); margin:auto; padding:42px 0 55px; }
+    .hero { text-align:center; padding:28px 8px 30px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:3px; font:11px Arial,sans-serif; color:#b66b85; }
+    h1 { font-size:clamp(38px, 10vw, 62px); line-height:1.08; margin:15px 0 12px; color:var(--deep); font-weight:normal; }
+    .subtitle { font-size:17px; line-height:1.7; margin:0 auto 24px; max-width:440px; }
+    button {
+      border:0; border-radius:999px; padding:13px 22px; cursor:pointer;
+      background:var(--pink); color:white; font-size:14px; box-shadow:0 8px 22px #d87c9b40;
+    }
+    button:active { transform:scale(.98); }
+    .music { margin-top:12px; background:#fff; color:var(--deep); border:1px solid #f0c5d3; box-shadow:none; }
+    .card {
+      background:#ffffffc9; border:1px solid #f4d6e0; border-radius:22px;
+      padding:25px clamp(19px, 5vw, 38px); box-shadow:0 18px 45px #b75d7b12;
+      backdrop-filter:blur(6px); margin:16px 0;
+    }
+    h2 { color:var(--deep); font-weight:normal; font-size:27px; margin:0 0 16px; }
+    .letter { font-size:16px; line-height:1.95; white-space:normal; }
+    .letter p { margin:0 0 16px; }
+    .signature { text-align:right; color:var(--deep); font-style:italic; margin-top:24px; }
+    .divider { text-align:center; color:#d887a2; letter-spacing:8px; margin:21px 0; }
+    .note { font:12px/1.7 Arial,sans-serif; color:#96717e; text-align:center; }
+    footer { text-align:center; padding:24px 10px 0; color:#9d7180; font-size:13px; line-height:1.8; }
+    .hidden { display:none; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; scroll-behavior:auto !important; } }
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">a little letter, just for you</div>
+      <h1>Happy Birthday,<br>Tataa ♡</h1>
+      <p class="subtitle">di hari spesial kamu, ada sedikit sesuatu yang pengen aku sampaikan.</p>
+      <button id="openLetter" type="button">buka surat kecil ini ♡</button>
+      <br>
+      <button class="music" id="musicButton" type="button">♫ putar musik</button>
+      <audio id="bgMusic" loop preload="none">
+        <!-- Simpan file musik bernama music.mp3 di folder yang sama dengan index.html -->
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <section class="card hidden" id="letterCard">
+      <h2>Untuk Tataa, di hari ulang tahunmu</h2>
+      <div class="letter">
+        <p>hi tataa, happy birthday yaa 🤍</p>
+        <p>hari ini adalah hari spesial kamu, jadi aku pengen ngucapin sesuatu yang tulus dari hati aku. semoga di umur yang baru ini, kamu selalu diberi kesehatan, kebahagiaan, dan banyak hal baik yang mungkin selama ini kamu doain diam-diam. semoga langkah kamu ke depannya dimudahkan, urusan kamu dilancarkan, dan kamu selalu dikelilingi orang-orang yang sayang sama kamu.</p>
+        <p>aku harap kamu tetap jadi tataa yang punya banyak alasan buat senyum. kalau suatu hari kamu capek, semoga kamu punya tempat buat istirahat. kalau lagi sedih, semoga ada hal kecil yang bisa bikin hari kamu terasa lebih ringan. kamu pantas dapet hal-hal baik, bukan cuma hari ini, tapi juga di hari-hari biasa setelah ulang tahunmu lewat.</p>
+        <p>aku juga mau bilang makasih buat semua kenangan yang pernah kita punya. buat obrolan sederhana, candaan yang kadang nggak jelas, waktu yang kita habiskan bareng, dan hal-hal kecil yang mungkin kelihatannya biasa aja, tapi sampai sekarang masih aku inget. semuanya pernah jadi bagian yang berarti buat aku.</p>
+        <p>aku sadar, nggak semua hal berjalan seperti yang kita harapkan. ada hal yang aku sesali, ada sikap aku yang seharusnya bisa lebih baik, dan ada pelajaran yang sekarang lagi aku coba pahami. aku nggak nulis ini buat bikin kamu merasa harus melakukan apa pun atau menjawab apa pun. aku cuma pengen menyampaikan ucapan ini dengan tulus, tanpa meminta balasan.</p>
+        <p>di hari ulang tahunmu ini, aku berharap kamu bahagia, bahkan ketika jalan kita sekarang nggak selalu sama. semoga kamu bisa terus tumbuh jadi diri kamu sendiri, menemukan banyak alasan buat bersyukur, dan punya masa depan yang kamu banggakan. jangan lupa jaga diri, istirahat yang cukup, dan jangan terlalu keras sama diri sendiri yaa.</p>
+        <p>selamat bertambah usia, tataa. semoga semua hal baik pelan-pelan menemukan jalannya ke kamu. terima kasih karena pernah hadir dan menjadi bagian dari cerita aku. kenangan itu akan tetap aku hargai, dan hari ini aku cuma ingin kamu tahu kalau aku benar-benar mendoakan yang baik buat kamu.</p>
+        <p>sekali lagi, happy birthday yaa. semoga hari ini penuh senyum, kehangatan, dan hal-hal kecil yang bikin kamu bahagia. 🤍</p>
+      </div>
+      <div class="divider">♡ · ♡ · ♡</div>
+      <div class="signature">dari seseorang yang pernah dekat denganmu</div>
+    </section>
+
+    <section class="card">
+      <p class="note">made with care ♡<br>kalau mau pakai musik, tambahkan file audio milikmu sendiri dan beri nama <b>music.mp3</b>.</p>
+    </section>
+    <footer>semoga tahun ini memperlakukanmu dengan lembut. ♡</footer>
+  </main>
+  <script>
+    const hearts = document.getElementById('hearts');
+    const symbols = ['♡', '♥', '✧'];
+    for (let i = 0; i < 18; i++) {
+      const heart = document.createElement('span');
+      heart.className = 'heart';
+      heart.textContent = symbols[i % symbols.length];
+      heart.style.left = (Math.random() * 100) + '%';
+      heart.style.animationDuration = (9 + Math.random() * 10) + 's';
+      heart.style.animationDelay = (-Math.random() * 15) + 's';
+      heart.style.fontSize = (14 + Math.random() * 18) + 'px';
+      hearts.appendChild(heart);
+    }
+    const openLetter = document.getElementById('openLetter');
+    const letterCard = document.getElementById('letterCard');
+    openLetter.addEventListener('click', () => {
+      letterCard.classList.remove('hidden');
+      letterCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      openLetter.textContent = 'suratnya sudah terbuka ♡';
+    });
+    const audio = document.getElementById('bgMusic');
+    const musicButton = document.getElementById('musicButton');
+    musicButton.addEventListener('click', async () => {
+      if (audio.paused) {
+        try {
+          await audio.play();
+          musicButton.textContent = 'Ⅱ jeda musik';
+        } catch (error) {
+          musicButton.textContent = 'tambahkan file music.mp3 dulu ♡';
+        }
+      } else {
+        audio.pause();
+        musicButton.textContent = '♫ putar musik';
+      }
+    });
+  </script>
+</body>
+</html>
